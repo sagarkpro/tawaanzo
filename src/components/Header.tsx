@@ -7,10 +7,10 @@ import { FaListUl } from 'react-icons/fa';
 import { motion } from "framer-motion";
 import { ImCross } from 'react-icons/im';
 import Link from 'next/link';
+import { basePath } from './BasePath';
 
 export default function Header() {
   const isGhDeployment: boolean = process.env.NODE_ENV === "production";
-  const basePath: string = process.env.basePath || "";
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
   function handleMousedownEvent(e: MouseEvent) {
