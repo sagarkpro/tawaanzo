@@ -9,6 +9,8 @@ import { ImCross } from 'react-icons/im';
 import Link from 'next/link';
 
 export default function Header() {
+  const isGhDeployment: boolean = process.env.NODE_ENV === "production";
+  const basePath: string = process.env.basePath || "";
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
   function handleMousedownEvent(e: MouseEvent) {
@@ -27,9 +29,10 @@ export default function Header() {
   }, [])
 
   return (
+
     <div className='w-full bg-secondary flex items-center h-20'>
       <Link href='/' className='w-40 ml-2 mr-6 shrink-0 rounded overflow-hidden'>
-        <img className='w-full object-scale-down' src="/images/tawaanzo-logo.jpg" alt="Tawaanzo" />
+        <img className='w-full object-scale-down' src={`${isGhDeployment ? basePath : ''}/images/tawaanzo-logo.jpg`} alt="Tawaanzo" />
       </Link>
 
       <div className='w-full h-full items-center 2xs:hidden md:flex'>
