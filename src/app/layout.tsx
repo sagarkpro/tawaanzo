@@ -16,13 +16,17 @@ export const metadata: Metadata = {
   description: "Tax, GST, Company Registration, you name it, we do it!",
 };
 
-export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
       <body className={`${roboto.className} antialiased`}>
-        <Header/>
-        {children}
-        <Footer/>
+        <Header />
+        <div className="flex justify-center">
+          <div className="max-w-screen-xl">
+            {children}
+          </div>
+        </div>
+        <Footer />
       </body>
     </html>
   );

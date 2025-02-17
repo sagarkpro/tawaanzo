@@ -1,5 +1,7 @@
-export default interface ServiceSummary{
+export default interface ServiceSummaryInterface{
   title: string,
   description: string,
-  types: string[]
+  types: string[],
+  price: number,
+  href: string,
 }
