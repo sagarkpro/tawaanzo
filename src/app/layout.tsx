@@ -22,7 +22,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${roboto.className} antialiased`}>
         <Header />
         <div className="flex justify-center">
-          <div className="max-w-screen-xl">
+          <div className="max-w-screen-xl min-h-[calc(100vh-10rem)]">
             {children}
           </div>
         </div>
