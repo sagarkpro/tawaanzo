@@ -1,9 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
+import { basePath } from "@/components/BasePath";
 import ServiceSummary from "@/components/ServiceSummary";
 import { HomeContent } from "@/constatns/HomeContent";
 import { lobster } from "@/fonts/Lobster";
 
 export default function Home() {
+  const isGhDeployment: boolean = process.env.NODE_ENV === "production";
+
   return (
     <div className="p-4 w-full flex flex-wrap justify-center items-stretch">
       <div className="mt-8">
@@ -24,7 +27,7 @@ export default function Home() {
       </div>
 
       <div className="mt-4 flex w-full 2xs:flex-col sm:flex-row">
-        <img className="2xs:w-full sm:w-2/5 object-cover object-center" src="/images/customer-experience-rating.jpg" alt="Customer Satisfaction" />
+        <img className="2xs:w-full sm:w-2/5 object-cover object-center" src={`${isGhDeployment ? basePath : ''}/images/customer-experience-rating.jpg`} alt="Customer Satisfaction" />
         <div className="sm:ml-6 2xs:w-full sm:w-3/5 flex items-center">
           <div className="w-full">
             <p className="text-justify my-4">
