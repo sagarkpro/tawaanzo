@@ -1,7 +1,7 @@
 'use client'
 
 /* eslint-disable @next/next/no-img-element */
-import { NavLinks } from '@/constatns/NavLinks'
+import { NavLinks } from '@/staticContent/NavLinks'
 import React, { useEffect, useState } from 'react'
 import { FaListUl } from 'react-icons/fa';
 import { motion } from "framer-motion";

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { basePath } from "@/components/BasePath";
 import ServiceSummary from "@/components/ServiceSummary";
-import { HomeContent } from "@/constatns/HomeContent";
+import { HomeContent } from "@/staticContent/HomeContent";
 import { lobster } from "@/fonts/Lobster";
 
 export default function Home() {
