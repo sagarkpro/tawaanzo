@@ -31,7 +31,7 @@ export default function Header() {
   return (
 
     <div className='w-full bg-secondary flex items-center h-20'>
-      <Link href='/' className='w-40 ml-2 mr-6 shrink-0 rounded overflow-hidden'>
+      <Link href={`${isGhDeployment ? basePath : ''}/`} className='w-40 ml-2 mr-6 shrink-0 rounded overflow-hidden'>
         <img className='w-full object-scale-down' src={`${isGhDeployment ? basePath : ''}/images/tawaanzo-logo.jpg`} alt="Tawaanzo" />
       </Link>
 
@@ -39,7 +39,7 @@ export default function Header() {
         {
           NavLinks.map((navLink) => {
             return (
-              <a href={navLink.href} key={navLink.text} className='text-white pr-5 font-medium text-lg hover:text-primary transition-colors duration-200'>
+              <a href={`${isGhDeployment ? basePath : ''}/${navLink.href}`} key={navLink.text} className='text-white pr-5 font-medium text-lg hover:text-primary transition-colors duration-200'>
                 {navLink.text}
               </a>
             );
@@ -72,7 +72,7 @@ export default function Header() {
                 {
                   NavLinks.map((navLink) => {
                     return (
-                      <a id='link' href={navLink.href} key={navLink.text} className='text-secondary py-2 font-medium text-lg hover:text-primary transition-colors duration-200'>
+                      <a id='link' href={`${isGhDeployment ? basePath : ''}/${navLink.href}`} key={navLink.text} className='text-secondary py-2 font-medium text-lg hover:text-primary transition-colors duration-200'>
                         {navLink.text}
                       </a>
                     );
