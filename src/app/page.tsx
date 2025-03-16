@@ -5,7 +5,7 @@ import { HomeContent } from "@/staticContent/HomeContent";
 import { lobster } from "@/fonts/Lobster";
 
 export default function Home() {
-  const isGhDeployment: boolean = process.env.NODE_ENV === "production";
+  const isGhDeployment: boolean = false;
 
   return (
     <div className="p-4 w-full flex flex-wrap justify-center items-stretch">

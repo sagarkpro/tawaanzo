@@ -3,7 +3,7 @@ import React from 'react'
 import { basePath } from './BasePath'
 
 export default function ServiceSummary(props: { service: ServiceSummaryInterface }) {
-  const isGhDeployment: boolean = process.env.NODE_ENV === "production";
+  const isGhDeployment: boolean = false;
   return (
     <div className='rounded-xl p-4 w-full shadow-[0_0px_7px_rgba(0,0,0,0.4)] h-full flex flex-col'>
       <a className='text-xl font-medium px-2 text-primary hover:text-tint hover:underline' href={`${isGhDeployment ? basePath : ''}/${props.service.href}`}>{props.service.title}</a>

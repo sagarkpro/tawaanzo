@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { basePath } from './BasePath';
 
 export default function Header() {
-  const isGhDeployment: boolean = process.env.NODE_ENV === "production";
+  const isGhDeployment: boolean = false;
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
   function handleMousedownEvent(e: MouseEvent) {
