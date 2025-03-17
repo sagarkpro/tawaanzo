@@ -85,7 +85,7 @@ export default function ServiceForm() {
   return (
     <div className="max-w-3xl mx-auto p-6 bg-gray-100 rounded-md shadow-md text-black">
       <h2 className="text-xl font-bold mb-4">Service Form</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form className="space-y-4">
         <input type="text" name="id" placeholder="ID" value={service.id} onChange={handleChange} className={inputClass} />
         <input type="text" name="name" placeholder="Name" value={service.name} onChange={handleChange} className={inputClass} />
         <input type="text" name="heading" placeholder="Heading" value={service.heading} onChange={handleChange} className={inputClass} />
@@ -121,7 +121,7 @@ export default function ServiceForm() {
         ))}
         <button type="button" onClick={addType} className={`${btnClass} bg-blue-500`}>Add Type</button>
 
-        <button type="submit" className={`${btnClass} bg-green-500`}>Submit</button>
+        <button className={`${btnClass} bg-green-500`} onClick={handleSubmit}>Submit</button>
       </form>
     </div>
   );
