@@ -28,7 +28,7 @@ export default function ServiceForm() {
 
   const handleArrayChange = (typeIndex: number, key: keyof ServiceDetails, index: number, value: string) => {
     const updatedTypes = [...service.types];
-    //@ts-expect-error kljlk
+    //@ts-expect-error kljl
     updatedTypes[typeIndex] = { ...updatedTypes[typeIndex], [key]: [...updatedTypes[typeIndex][key]] };
     //@ts-expect-error some
     updatedTypes[typeIndex][key][index] = value;
@@ -65,7 +65,7 @@ export default function ServiceForm() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     console.log(service);
-    window.navigator.clipboard.writeText(JSON.stringify(service));
+    window.navigator.clipboard.writeText(JSON.stringify(service, null, 2));
   };
 
   return (
