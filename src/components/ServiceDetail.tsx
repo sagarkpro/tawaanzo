@@ -6,15 +6,23 @@ export default function ServiceDetailComponent(props: { service: ServiceDetails 
   return (
     <div className='rounded-xl p-4 w-full shadow-[0_0px_7px_rgba(0,0,0,0.4)] h-full flex flex-col'>
       <h1 className='text-xl font-medium px-2 text-primary'>{props.service.name}</h1>
-      <p className='text-justify px-2 mt-4'>{props.service.description}</p>
+      
+      {
+        props.service.descriptions.map((description, index) => {
+          return(
+            <p className='text-justify px-2 mt-4' key={`desc-${index}`}>{description}</p>
+          )
+        })
+      }
+
       <ul className='p-6'>
         {
           props.service.features.map((feature) => {
             return (
               <li key={feature} className='py-2'>
-                <div className='flex items-center'>
-                  <div className='text-primary text-lg'>
-                    <FaCheckCircle />
+                <div className='flex items-start'>
+                  <div className='text-primary text-lg mt-1'>
+                    <FaCheckCircle/>
                   </div>
                   <div className='px-2'>
                     {feature}

@@ -11,11 +11,11 @@ export default function Home() {
       <div className="mt-8">
         <h1 className={`text-primary font-semibold text-3xl my-4 ${lobster.className}`}>Who We Are</h1>
         <p className="text-justify my-4">
-          We are a team of Chartered Accountants, Legal Experts, and Business Consultants dedicated to simplifying business registration, accounting, and compliance for startups, entrepreneurs, and SMEs across India.
+          We aim to be your &ldquo;one-stop shop&rdquo; for all your needs, whether it&apos;s setting up a business in various jurisdictions, managing Intellectual Property Rights (IPR), obtaining government licenses, or providing post-incorporation compliance solutions. Our services include advisory on business setup, accounting, taxation, and other related professional matters.
         </p>
 
         <p className="text-justify my-4">
-          With years of experience in company incorporation, tax filing, and legal advisory, we provide affordable, transparent, and hassle-free services—all online. Our mission is to help businesses focus on growth while we handle their legal and financial needs.
+          Our mission is to provide one-click access from anywhere for all your legal and professional needs throughout the lifecycle of your business. We ensure that your business continues to grow while staying compliant with legal and tax authorities.
         </p>
 
         <p className="text-justify my-4">
@@ -47,6 +47,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <h1 className={`text-primary font-semibold text-3xl my-2 mt-8 w-full ${lobster.className}`}>Our Frequently Used Services</h1>
 
       {
         HomeContent.map((service, index) => {

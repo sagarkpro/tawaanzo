@@ -2,7 +2,7 @@ import ServiceSummary from "@/models/ServiceSummary.interface"
 
 export const HomeContent: ServiceSummary[] = [
   {
-    title: "Start Business",
+    title: "Start your Business",
     description: "Get your business officially registered with the government. We assist you in registering:",
     types: [
       "Private Limited Company",
@@ -12,11 +12,11 @@ export const HomeContent: ServiceSummary[] = [
       "Partnership Firm",
       "Proprietorship Firm"
     ],
-    price: 1999,
+    price: 2999,
     href: "/start-business"
   },
   {
-    title: "Registration",
+    title: "GST Registration",
     description: "Make your business compliant and legally recognized by obtaining necessary registrations. We provide:",
     types: [
       "GST Registration",
@@ -24,11 +24,11 @@ export const HomeContent: ServiceSummary[] = [
       "Import-Export Code (IEC)",
       "FSSAI Food License"
     ],
-    price: 1999,
+    price: 799,
     href: "/registration"
   },
   {
-    title: "Trademark",
+    title: "Trademark Registration",
     description: "Secure your brand identity by registering and protecting your trademarks. We offer services in:",
     types: [
       "Trademark Registration",
@@ -44,7 +44,7 @@ export const HomeContent: ServiceSummary[] = [
     href: "/trademark"
   },
   {
-    title: "ACCOUNTING & TAXES",
+    title: "Accounting & Taxes",
     description: "Our Accounting & Taxes services ensure that your business remains compliant with all applicable financial regulations, minimizing tax liabilities, and optimizing your financial performance.",
     types: [
       "Accounting & Bookkeeping Services",
@@ -57,7 +57,7 @@ export const HomeContent: ServiceSummary[] = [
       // "GST Return Filing",
       // "Input Tax Credit (ITC) Reconciliation"
     ],
-    price: 1999,
+    price: 999,
     href: "/accounting-taxes"
   }
 ];
