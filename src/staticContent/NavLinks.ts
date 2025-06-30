@@ -8,27 +8,27 @@ export const NavLinks: NavLink[] = [
   },
   {
     text: "Start Business",
-    href: "/start-business",
+    href: "/services/start-business",
     order: 1
   },
   {
     text: "Registration",
-    href: "/registration",
+    href: "/services/registration",
     order: 2
   },
   {
     text: "Trademark",
-    href: "/trademark",
+    href: "/services/trademark",
     order: 3
   },
   {
     text: "Accounting & Taxes",
-    href: "/accounting-taxes",
+    href: "/services/accounting-taxes",
     order: 4
   },
   {
     text: "Contact Us",
-    href: "/contact-us",
+    href: "/services/contact-us",
     order: 5
   },
 ]

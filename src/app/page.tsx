@@ -1,11 +1,11 @@
-'use client'
+'use server'
 
 /* eslint-disable @next/next/no-img-element */
 import ServiceSummary from "@/components/ServiceSummary";
 import { HomeContent } from "@/staticContent/HomeContent";
 import { lobster } from "@/fonts/Lobster";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="p-4 w-full flex flex-wrap justify-center items-stretch">
       <div className="mt-8">
@@ -51,9 +51,9 @@ export default function Home() {
       <h1 className={`text-primary font-semibold text-3xl my-2 mt-8 w-full ${lobster.className}`}>Our Frequently Used Services</h1>
 
       {
-        HomeContent.map((service, index) => {
+        HomeContent.map((service) => {
           return (
-            <div key={index} className="2xs:w-full 2xs:p-2 sm:w-1/4 sm:p-0 sm:pr-6 sm:my-8">
+            <div key={`service-${service.title}`} className="2xs:w-full 2xs:p-2 sm:w-1/4 sm:p-0 sm:pr-6 sm:my-8">
               <ServiceSummary service={service} />
             </div>
           )
