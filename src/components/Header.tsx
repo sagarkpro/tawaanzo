@@ -30,7 +30,7 @@ export default function Header() {
 
     <div className='w-full bg-secondary flex items-center h-20'>
       <Link href={`/`} className='w-40 ml-2 mr-6 shrink-0 rounded overflow-hidden'>
-        <img className='w-full object-scale-down' src={`/images/tawaanzo-logo.jpg`} alt="Tawaanzo" />
+        <img className='w-full object-scale-down' src={`/images/tawaanzo-logo.png`} alt="Tawaanzo" />
       </Link>
 
       <div className='w-full h-full items-center 2xs:hidden md:flex'>
