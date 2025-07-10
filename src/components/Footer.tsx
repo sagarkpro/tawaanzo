@@ -1,7 +1,9 @@
+"use server";
+
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-export default function Footer() {
+export default async function Footer() {
 	return (
 		<div className="bg-secondary w-full min-h-20 flex flex-wrap 2xs:flex-col 2xs:items-center sm:items-start sm:flex-row text-white">
 			<div className="flex flex-col w-max items-center p-4">
